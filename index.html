@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Venkata Chandu Pitta | QA Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F5FB;--surface:#FFFFFF;--ink:#171B2E;--muted:#59627D;--line:#D9DEEE;--a:#5B3FE0;--b:#0E9F8E;--term:#12162B;--termink:#DDE3FF;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1020;--surface:#161A30;--ink:#EBEEFF;--muted:#9AA3C4;--line:#262C4A;--a:#9D8CFF;--b:#3DDBC4;--term:#080B18;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0D1020;--surface:#161A30;--ink:#EBEEFF;--muted:#9AA3C4;--line:#262C4A;--a:#9D8CFF;--b:#3DDBC4;--term:#080B18;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Figtree,system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+a{color:var(--a)}:focus-visible{outline:3px solid var(--a);outline-offset:3px}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;margin:0;line-height:1.1}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.glow{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.glow i{position:absolute;width:46vmax;height:46vmax;border-radius:50%;filter:blur(90px);opacity:.26;animation:drift 22s ease-in-out infinite alternate}
+.glow i:nth-child(1){background:var(--a);top:-18vmax;left:-12vmax}
+.glow i:nth-child(2){background:var(--b);bottom:-22vmax;right:-14vmax;animation-delay:-9s}
+@keyframes drift{to{transform:translate(8vmax,6vmax) scale(1.15)}}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+nav b{font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;white-space:nowrap}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+nav ul a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.92rem}nav ul a:hover{color:var(--ink)}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;width:38px;height:38px;cursor:pointer;font-size:1.05rem}
+#bar{position:absolute;left:0;bottom:-1px;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b))}
+.hero{padding:76px 0 64px}
+.grid{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 14px;font-size:.88rem;font-weight:500;margin-bottom:18px}
+.badge i{width:8px;height:8px;border-radius:50%;background:#2BC48A;animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 9px transparent}0%{box-shadow:0 0 0 0 #2BC48A}}
+.hi{font-family:'JetBrains Mono',monospace;color:var(--b);font-size:.95rem;margin:0 0 8px}
+h1{font-size:clamp(2.6rem,7vw,4.8rem);font-weight:800;letter-spacing:-.025em;background:linear-gradient(100deg,var(--ink) 30%,var(--a) 55%,var(--b) 75%,var(--ink));background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite}
+@keyframes shine{to{background-position:-250% 0}}
+.role{font-size:1.3rem;font-weight:600;margin:16px 0 10px}
+.type{color:var(--a)}.caret{display:inline-block;width:2px;height:1.1em;background:var(--a);vertical-align:-.15em;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lede{color:var(--muted);max-width:54ch;margin:0 0 22px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px}
+.btn{padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:2px solid var(--ink);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 0 -2px var(--a)}.btn.main{background:var(--ink);color:var(--bg)}
+.soc{display:flex;gap:18px;flex-wrap:wrap}.soc a{font-weight:600;text-decoration:none}.soc a:hover{text-decoration:underline}
+.term{background:var(--term);color:var(--termink);border-radius:14px;border:1px solid var(--line);box-shadow:0 24px 60px -20px color-mix(in srgb,var(--a) 55%,transparent);font:400 .84rem/1.7 'JetBrains Mono',monospace;overflow:hidden}
+.tbar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:rgba(255,255,255,.06)}
+.tbar i{width:11px;height:11px;border-radius:50%;background:#FF6B6B}.tbar i:nth-child(2){background:#FFD166}.tbar i:nth-child(3){background:#38D39F}.tbar span{margin-left:8px;color:#8A93B8}
+#json{margin:0;padding:14px 16px;min-height:330px;white-space:pre-wrap;word-break:break-word;font:inherit}
+#json .k{color:#9D8CFF}#json .s{color:#38D39F}
+section{padding:70px 0;border-top:1px solid var(--line)}
+.eb{font-family:'JetBrains Mono',monospace;color:var(--b);font-size:.9rem;margin:0 0 10px}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:800;margin-bottom:30px;letter-spacing:-.015em;max-width:24ch}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.js .rv.in{opacity:1;transform:none}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:40px 0}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.stat b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:2.7rem;line-height:1;color:var(--a)}.stat span{color:var(--muted);font-size:.95rem}
+.marq{overflow:hidden;border-block:1px solid var(--line);padding:16px 0;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.track{display:flex;gap:42px;width:max-content;animation:scroll 32s linear infinite;font:500 1.1rem 'JetBrains Mono',monospace;color:var(--muted)}
+.marq:hover .track{animation-play-state:paused}@keyframes scroll{to{transform:translateX(-50%)}}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}.about p{color:var(--muted);margin:0 0 14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:1.15rem;margin:4px 0 12px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sk{transition:transform .25s,border-color .25s}.sk:hover{transform:translateY(-5px);border-color:var(--a)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid var(--line);border-radius:999px;padding:2px 11px;font-size:.86rem;color:var(--muted)}
+.tl{border-left:2px solid var(--line);margin-left:8px;padding-left:28px;position:relative}
+.tl::after{content:"";position:absolute;left:-2px;top:0;width:2px;height:var(--p,0%);background:linear-gradient(var(--a),var(--b))}
+.tl .dot{position:absolute;left:-9px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--a);animation:ping2 2.2s infinite}
+@keyframes ping2{0%{box-shadow:0 0 0 0 var(--a)}70%{box-shadow:0 0 0 14px transparent}}
+.top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:baseline}.top h3{font-size:1.35rem}
+.when{color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:.85rem}
+.sub{color:var(--muted);margin:2px 0 10px}ul.pts{margin:8px 0 0;padding-left:20px}ul.pts li{margin-bottom:7px;max-width:72ch}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step b{font-family:'JetBrains Mono',monospace;color:var(--a);font-size:.9rem}.step p{margin:0;color:var(--muted)}
+.projs{display:grid;grid-template-columns:1fr 1fr;gap:20px;perspective:900px}
+.proj{padding:26px;transition:transform .15s,border-color .3s;transform-style:preserve-3d;position:relative;overflow:hidden}
+.proj::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--a) 22%,transparent),transparent 70%);opacity:0;transition:opacity .3s}
+.proj:hover{border-color:var(--a)}.proj:hover::before{opacity:1}.proj>*{position:relative}
+.proj h3{font-size:1.4rem;margin:0}.proj h4{margin:14px 0 4px;font-size:.95rem}
+.stack{color:var(--b);font-family:'JetBrains Mono',monospace;font-size:.82rem;margin:6px 0 12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.plain{list-style:none;margin:0;padding:0}.plain li{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.edu small{display:block;color:var(--muted)}
+.contact a.big{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.3rem,4.5vw,2.6rem);font-weight:800;text-decoration:none;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent;word-break:break-all}
+.contact p{margin:10px 0;color:var(--muted)}
+footer{padding:28px 0 44px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:860px){.grid,.two,.projs,.about{grid-template-columns:1fr}.skills,.steps{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}nav ul{display:none}}
+@media(max-width:520px){.skills,.steps{grid-template-columns:1fr}.hero{padding-top:44px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="glow" aria-hidden="true"><i></i><i></i></div>
+<nav><div class="wrap"><b>VC Venkata Chandu</b>
+<ul><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#approach">Approach</a></li><li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul>
+<button id="theme" aria-label="Switch light and dark theme">◐</button></div><div id="bar"></div></nav>
+
+<header class="hero" id="home"><div class="wrap grid">
+<div>
+<span class="badge"><i></i>Open to entry-level QA opportunities</span>
+<p class="hi">Hello, I’m</p>
+<h1>Venkata Chandu Pitta</h1>
+<p class="role">Software Test Engineer • QA Engineer<br>I test with <span class="type" id="typed"></span><span class="caret"></span></p>
+<p class="lede">Building confidence in software through structured testing, web automation, API validation and database verification. 2026 B.Tech CSE graduate trained in manual testing, Selenium with Java, and Playwright with TypeScript.</p>
+<div class="btns"><a class="btn main" href="#projects">Explore my work</a><a class="btn" href="resume.pdf">View resume</a></div>
+<div class="soc"><a href="https://github.com/venkatachandu1011">GitHub ↗</a><a href="https://www.linkedin.com/in/venkata-chandu-ba3686253/">LinkedIn ↗</a><a href="mailto:venkata111chandu@gmail.com">Email ↗</a></div>
+</div>
+<div class="term" aria-label="qa-profile.json"><div class="tbar"><i></i><i></i><i></i><span>qa-profile.json</span></div><pre id="json"></pre></div>
+</div></header>
+
+<div class="marq" aria-hidden="true"><div class="track" id="track"></div></div>
+
+<div class="wrap"><div class="stats rv">
+<div class="stat"><b data-n="40">0</b><span>API test scenarios</span></div>
+<div class="stat"><b data-n="60">0</b><span>UI test cases</span></div>
+<div class="stat"><b data-n="15">0</b><span>Automated regression scenarios</span></div>
+<div class="stat"><b data-n="20">0</b><span>Defects tracked in Jira</span></div>
+</div></div>
+
+<section id="about"><div class="wrap about">
+<div class="rv"><p class="eb">About</p><h2>Quality-focused. Detail-driven. Always testing beyond the happy path.</h2>
+<p>I’m a Computer Science and Engineering graduate focused on Software Testing and Quality Assurance. I enjoy understanding how applications behave, finding defects and validating software against expected requirements.</p>
+<p>Through practical projects I have worked across manual testing, web automation, REST API testing and database validation: designing test cases, running functional and regression tests, automating critical web workflows, validating API responses, checking database results and tracking defects in Jira.</p>
+<p>I’m currently a Software Testing Trainee at QEdge Technologies, Hyderabad (Aug 2026 to present), and I’m seeking an entry-level Software Test Engineer or QA Engineer role.</p></div>
+<div class="card rv" style="align-self:start"><p class="eb">Current focus</p><h3>Software Quality Engineering</h3>
+<div class="chips"><span class="chip">Manual Testing</span><span class="chip">Automation Testing</span><span class="chip">REST API Testing</span><span class="chip">Database Validation</span></div></div>
+</div></section>
+
+<section id="skills"><div class="wrap"><p class="eb rv">Technical skills</p><h2 class="rv">A focused testing stack built around practical QA work.</h2>
+<div class="skills">
+<div class="card sk rv"><h3>Programming</h3><div class="chips"><span class="chip">Core Java</span><span class="chip">OOP</span><span class="chip">Collections</span><span class="chip">Exception Handling</span><span class="chip">SQL</span><span class="chip">TypeScript</span></div></div>
+<div class="card sk rv"><h3>Manual Testing</h3><div class="chips"><span class="chip">SDLC</span><span class="chip">STLC</span><span class="chip">Test Plan</span><span class="chip">Test Cases</span><span class="chip">Functional</span><span class="chip">Regression</span><span class="chip">Smoke</span><span class="chip">Sanity</span><span class="chip">Exploratory</span><span class="chip">Boundary Value Analysis</span><span class="chip">Equivalence Partitioning</span><span class="chip">RTM</span><span class="chip">Defect Life Cycle</span></div></div>
+<div class="card sk rv"><h3>Automation Testing</h3><div class="chips"><span class="chip">Selenium WebDriver</span><span class="chip">Playwright</span><span class="chip">TestNG</span><span class="chip">Maven</span><span class="chip">Page Object Model</span><span class="chip">XPath and CSS</span><span class="chip">Waits</span><span class="chip">Frames and Windows</span><span class="chip">Data-Driven</span><span class="chip">Cross-Browser</span><span class="chip">Traces and Reports</span></div></div>
+<div class="card sk rv"><h3>API Testing</h3><div class="chips"><span class="chip">REST API</span><span class="chip">Postman</span><span class="chip">HTTP Methods</span><span class="chip">Status Codes</span><span class="chip">Headers</span><span class="chip">JSON</span><span class="chip">Request and Response Validation</span></div></div>
+<div class="card sk rv"><h3>Database</h3><div class="chips"><span class="chip">SELECT</span><span class="chip">INSERT</span><span class="chip">UPDATE</span><span class="chip">DELETE</span><span class="chip">Joins</span><span class="chip">PostgreSQL</span><span class="chip">Data Validation</span></div></div>
+<div class="card sk rv"><h3>Tools</h3><div class="chips"><span class="chip">Jira</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">IntelliJ IDEA</span><span class="chip">VS Code</span><span class="chip">Agile</span><span class="chip">Scrum</span><span class="chip">Defect Management</span></div></div>
+</div></div></section>
+
+<section id="experience"><div class="wrap"><p class="eb rv">Experience</p><h2 class="rv">Hands-on training in manual and automation testing.</h2>
+<div class="tl rv" id="tl"><span class="dot"></span>
+<div class="top"><h3>Software Testing Trainee</h3><span class="when">Aug 2026 – Present</span></div>
+<p class="sub">Manual, Selenium and Playwright Automation Testing · QEdge Technologies, Hyderabad</p>
+<ul class="pts"><li>Applied SDLC and STLC to design test cases and execute functional and regression testing; logged and tracked defects in Jira.</li><li>Automated web UI testing using Selenium WebDriver with Java and the Page Object Model; used Maven and TestNG for execution and reporting.</li><li>Automated browser workflows using Playwright (TypeScript) with locators, auto-waiting and web-first assertions; debugged failures using traces and reports.</li><li>Executed REST API testing using Postman and database testing using SQL and PostgreSQL to verify data integrity.</li></ul></div></div></section>
+
+<section id="approach"><div class="wrap"><p class="eb rv">Testing approach</p><h2 class="rv">How I approach software testing.</h2>
+<div class="steps">
+<div class="card step rv"><b>Step 1</b><h3>Understand</h3><p>Review application workflows and expected behavior before designing tests.</p></div>
+<div class="card step rv"><b>Step 2</b><h3>Design</h3><p>Write clear test scenarios and test cases for the important flows.</p></div>
+<div class="card step rv"><b>Step 3</b><h3>Execute</h3><p>Run functional, regression, smoke, sanity and negative tests.</p></div>
+<div class="card step rv"><b>Step 4</b><h3>Automate</h3><p>Automate repeatable web workflows with Selenium, Playwright and TestNG.</p></div>
+<div class="card step rv"><b>Step 5</b><h3>Verify</h3><p>Validate API behavior and data with Postman, SQL and PostgreSQL.</p></div>
+<div class="card step rv"><b>Step 6</b><h3>Report</h3><p>Document defects clearly and track them in Jira.</p></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap"><p class="eb rv">Projects</p><h2 class="rv">Practical testing work that shows how I apply QA concepts.</h2>
+<div class="projs">
+<article class="card proj rv"><div class="top"><h3>CollabConnect</h3><span class="when">Jun 2026</span></div>
+<p class="stack">REST API testing and database validation</p>
+<ul class="pts"><li>Designed 40+ test scenarios for REST APIs covering authentication, search and CRUD operations.</li><li>Executed functional and negative API testing in Postman, validating responses, status codes and error handling.</li><li>Performed SQL and PostgreSQL database testing to verify data integrity.</li></ul>
+<h4>What I tested</h4><div class="chips"><span class="chip">Authentication</span><span class="chip">Project management APIs</span><span class="chip">Search</span><span class="chip">CRUD</span></div>
+<p class="stack">Java · REST API · Postman · SQL · PostgreSQL</p>
+<a href="https://github.com/venkatachandu1011/CollabConnect">View repository ↗</a></article>
+<article class="card proj rv"><div class="top"><h3>E-Commerce Web Application</h3><span class="when">Jun 2026</span></div>
+<p class="stack">Manual and automation testing</p>
+<ul class="pts"><li>Designed 60+ test cases for login, search, cart and checkout, mapped to requirements using an RTM.</li><li>Automated 15+ regression scenarios using Java, Selenium WebDriver and TestNG with the Page Object Model.</li><li>Automated login and checkout in Playwright (TypeScript) with the Page Object Model.</li><li>Performed Postman API and SQL validation; tracked 20+ defects in Jira.</li></ul>
+<h4>Workflows tested</h4><div class="chips"><span class="chip">Login</span><span class="chip">Product search</span><span class="chip">Cart</span><span class="chip">Checkout</span></div>
+<p class="stack">Java · Selenium · TestNG · Playwright · Maven · Postman · SQL · Jira</p></article>
+</div></div></section>
+
+<section id="education"><div class="wrap two">
+<div class="rv"><p class="eb">Training and certifications</p><h2>Always learning.</h2>
+<ul class="plain edu">
+<li><span>Manual and Selenium Automation Testing<small>QEdge Technologies, Hyderabad</small></span><span class="when">Aug 2026 – Present</span></li>
+<li><span>Object-Oriented Programming Using Java<small>Centre for Professional Enhancement, LPU</small></span><span class="when">Jun – Jul 2024</span></li>
+<li><span><a href="https://www.udemy.com/certificate/UC-2129c80a-89f2-46a2-ac91-a845dbc5fc57/">Java Masterclass, 130+ hours ↗</a></span><span class="when">Mar 2026</span></li>
+<li><span><a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=A3FA6693AF68F34FD8593D661F30AFB0231B0A28222CC26B9B4E33CC5FDDDC06">Oracle Certified Foundations Associate ↗</a></span><span class="when">Apr 2026</span></li></ul></div>
+<div class="rv"><p class="eb">Education</p><h2>Academic background.</h2>
+<ul class="plain edu">
+<li><span>Lovely Professional University<small>B.Tech CSE · CGPA 6.59 · Jalandhar, Punjab</small></span><span class="when">2022 – 2026</span></li>
+<li><span>Narayana Junior College<small>12th with Science · 73.06% · Nandyal</small></span><span class="when">2020 – 2022</span></li>
+<li><span>Sri Chaitanya School<small>10th with Science · 98% · Nandyal</small></span><span class="when">2019 – 2020</span></li></ul></div>
+</div></section>
+
+<section id="contact"><div class="wrap contact rv"><p class="eb">Contact</p><h2>Let’s build better software together.</h2>
+<p>I’m looking for an entry-level Software Test Engineer or QA Engineer opportunity. If my profile fits your team, I’d be happy to connect.</p>
+<p><a class="big" href="mailto:venkata111chandu@gmail.com">venkata111chandu@gmail.com</a></p>
+<p>+91 8309857629 · Nandyal, Andhra Pradesh, India</p>
+<div class="btns"><a class="btn main" href="mailto:venkata111chandu@gmail.com">Email me</a><a class="btn" href="https://www.linkedin.com/in/venkata-chandu-ba3686253/">LinkedIn</a></div></div></section>
+<footer><div class="wrap"><span>© Venkata Chandu Pitta · Software Test Engineer • QA Engineer</span><a href="#home">Back to top ↑</a></div></footer>
+
+<script>
+document.documentElement.classList.add('js');
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var tools=['Playwright','TypeScript','Selenium','Java','TestNG','Maven','Postman','SQL','PostgreSQL','Jira','Git','Agile'];
+document.getElementById('track').innerHTML=tools.concat(tools).map(function(t){return '<span>'+t+'</span>'}).join('');
+var words=['Playwright','Selenium','Postman','SQL'],wi=0,ci=0,del=false,tp=document.getElementById('typed');
+function tick(){var w=words[wi];tp.textContent=w.slice(0,ci);
+ if(!del&&ci===w.length){del=true;return setTimeout(tick,1500)}
+ if(del&&ci===0){del=false;wi=(wi+1)%words.length}
+ ci+=del?-1:1;setTimeout(tick,del?50:95)}
+RM?tp.textContent='Playwright':tick();
+var J='{\n  "role": "QA Engineer",\n  "focus": ["Manual Testing",\n    "Automation Testing",\n    "API Testing",\n    "Database Validation"],\n  "automation": ["Playwright",\n    "Selenium WebDriver",\n    "Java", "TypeScript", "TestNG"],\n  "tools": ["Postman", "SQL",\n    "PostgreSQL", "Jira", "Git"],\n  "status": "Ready to learn & contribute"\n}';
+var jp=document.getElementById('json');
+function hl(t){return t.replace(/&/g,'&amp;').replace(/"([^"]+)"(?=:)/g,'<span class="k">"$1"</span>').replace(/: "([^"]*)"/g,': <span class="s">"$1"</span>').replace(/(\[|, |\n\s+)"([^"]*)"/g,'$1<span class="s">"$2"</span>')}
+if(RM){jp.innerHTML=hl(J)}else{var n=0;(function t(){n+=2;jp.textContent=J.slice(0,n);if(n<J.length)return setTimeout(t,28);jp.innerHTML=hl(J)})()}
+function count(el){var n=+el.dataset.n,t0=null;if(RM){el.textContent=n+'+';return}
+ (function f(t){t0=t0||t;var p=Math.min((t-t0)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+(p===1?'+':'');if(p<1)requestAnimationFrame(f)})(performance.now())}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');
+ e.target.querySelectorAll('[data-n]').forEach(count);io.unobserve(e.target)})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*80+'ms';io.observe(el)});
+var bar=document.getElementById('bar'),tl=document.getElementById('tl');
+function sc(){var h=document.documentElement,p=h.scrollTop/(h.scrollHeight-h.clientHeight);bar.style.width=(p*100)+'%';
+ var r=tl.getBoundingClientRect(),v=Math.min(Math.max((innerHeight*.7-r.top)/r.height,0),1);tl.style.setProperty('--p',(v*100)+'%')}
+addEventListener('scroll',sc,{passive:true});sc();
+document.querySelectorAll('.proj').forEach(function(c){
+ c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+  c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');
+  if(!RM)c.style.transform='rotateY('+((x-.5)*8)+'deg) rotateX('+((.5-y)*8)+'deg)'});
+ c.addEventListener('mouseleave',function(){c.style.transform=''})});
+document.getElementById('theme').onclick=function(){var r=document.documentElement,
+ dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+ r.dataset.theme=dark?'light':'dark'};
+</script>
+</body>
+</html>
